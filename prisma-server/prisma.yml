@@ -1,0 +1,6 @@
+endpoint: https://spotlight-server-1def133064.herokuapp.com/prisma-server/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/

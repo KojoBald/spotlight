@@ -1,0 +1,28 @@
+type User {
+  id: ID! @unique
+  name: String!
+}
+
+type Artist {
+  id: ID! @unique
+  name: String!
+}
+
+type Album {
+  id: ID! @unique
+  name: String!
+  artists: [Artist!]!
+}
+
+type Song {
+  id: ID! @unique
+  name: String!
+  album: Album!
+  artist: Artist!
+}
+
+type Playlist {
+  id: ID! @unique
+  name: String!
+  songs: [Song!]!
+}
