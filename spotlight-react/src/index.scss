@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'bulma/bulma.sass';
+
+body {
+  background-color: #fafafa;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  #app {
+    overflow-y: scroll;
+
+    .button {
+      border-radius: 25px;
+      &:hover, &:active, &:focus {
+        color: white;
+        a { color: white }
+      }
+    }
+  }
+}

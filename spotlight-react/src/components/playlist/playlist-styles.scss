@@ -1,0 +1,38 @@
+.playlist {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 20px;
+
+    .playlist__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 110%;
+        height: 110%;
+        z-index: 0;
+        filter: opacity(.9) blur(3px);
+        transition: 350ms ease;
+
+        &:hover {
+            filter: opacity(1) blur(0px);
+        }
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: white;
+        background-color: gray;
+        display: inline;
+        padding: 0px 5px;
+    }
+
+    & > *:not(.playlist__image) {
+        position: relative;
+        z-index: 10;
+    }
+}

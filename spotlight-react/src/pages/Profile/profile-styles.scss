@@ -1,0 +1,37 @@
+.profile {
+
+    .profile__picture-container {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border: 2px solid #3273dc;
+        overflow: hidden;
+        .profile__picture {
+            height: 100%;
+            width: 100%
+        }
+    }
+
+    .profile__display-name {
+        display: inline-block;
+        font-weight: 700;
+    }
+
+    .profile__playlists {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            display: inline-block;
+            margin: 30px;
+            flex: 0 0 auto;
+            div { display: inline-block }
+        }
+    }
+}
