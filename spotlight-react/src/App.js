@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import SpotifyAPI from './spotify-api'
+import SpotifyAPI from '@/spotify-api'
 
-import AuthCallback from './pages/AuthCallback'
-import LandingPage from './pages/Landing'
-import ProfilePage from './pages/Profile'
+import AuthCallback from '@/pages/AuthCallback'
+import LandingPage from '@/pages/Landing'
+import ProfilePage from '@/pages/Profile'
 
-import Navbar from './components/navbar'
-import Loading from './components/loading'
+import Navbar from '@/components/navbar'
+import Loading from '@/components/loading'
 
-import './App.css'
+import '@/App.css'
 
 export default class App extends Component {
   state = {

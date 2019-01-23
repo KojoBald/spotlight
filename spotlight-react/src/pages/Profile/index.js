@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Loading from '../../components/loading'
-import Playlist from '../../components/playlist'
-import SpotifyAPI from '../../spotify-api'
+import Loading from '@/components/loading'
+import Playlist from '@/components/playlist'
+import SpotifyAPI from '@/spotify-api'
 
 import './profile-styles.scss'
 
