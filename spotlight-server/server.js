@@ -8,6 +8,8 @@ const AUTH_URL = 'https://accounts.spotify.com/authorize';
 const TOKEN_URL = 'https://accounts.spotify.com/api/token';
 const SCOPES = 'user-read-birthdate user-read-email user-read-private'
 
+app.use(require('./middleware/headers'))
+
 app.get('/auth', (req, res) => {
     if(req.query.code) {
         requestSpotifyAccessToken(req.query.code)

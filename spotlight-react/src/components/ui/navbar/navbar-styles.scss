@@ -3,7 +3,9 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    width: 80%; //todo: figure a way to make this more responsive
     padding: 10px;
-
+    position: fixed;
+    right: 0;
     .control { margin-right: 20px }
 }

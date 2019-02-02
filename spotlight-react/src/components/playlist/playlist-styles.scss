@@ -5,7 +5,9 @@
     overflow: hidden;
     border: 1px solid black;
     cursor: pointer;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .playlist__image {
         position: absolute;
@@ -15,20 +17,50 @@
         height: 110%;
         z-index: 0;
         filter: opacity(.9) blur(3px);
-        transition: 350ms ease;
+        transition: 150ms linear;
 
         &:hover {
             filter: opacity(1) blur(0px);
         }
     }
 
-    h2 {
-        font-weight: 500;
-        font-size: 1.5rem;
-        color: white;
-        background-color: gray;
-        display: inline;
-        padding: 0px 5px;
+    .playlist-name-wrapper {
+        flex: 0 0 auto;
+        padding: 20px;
+        .playlist__name {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: white;
+            background-color: $light-gray;
+            display: inline;
+            padding: 3px;
+        }
+    }
+
+    .playlist__info {
+        display: block;
+        flex: 0 0 auto;
+        background-color: #fafafa;
+        color: $dark-gray;
+        margin: 0;
+        padding: 20px;
+        border-top: 1px solid black;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+
+        li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 30px;
+            color: $primary;
+            font-weight: 600;
+            span {
+                color: $dark-gray;
+                margin-right: 10px;
+            }
+        }
     }
 
     & > *:not(.playlist__image) {

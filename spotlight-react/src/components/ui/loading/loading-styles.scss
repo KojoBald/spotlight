@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(#fafafa, .5)
+    background: linear-gradient(rgba($light-gray, .5), rgba($dark-gray, .5));
 }
 
 @keyframes lds-spin {
@@ -43,7 +43,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #3273dc;
+    background: $primary;
     -webkit-animation: lds-spin 1s linear infinite;
     animation: lds-spin 1s linear infinite;
   }

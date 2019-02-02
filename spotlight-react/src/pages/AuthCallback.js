@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import qs from 'query-string'
-import SpotifyAPI from '@/spotify-api'
+import SpotifyAPI from '@/util/spotify-api'
 
-import Loading from '@/components/loading'
+import Loading from '@/components/ui/loading'
 
 export default class AuthCallback extends Component {
     componentDidMount = () => {

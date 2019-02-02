@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'bloomer'
-import SpotifyAPI from '@/spotify-api'
+import SpotifyAPI from '@/util/spotify-api'
 
 import './landing-styles.scss'
 

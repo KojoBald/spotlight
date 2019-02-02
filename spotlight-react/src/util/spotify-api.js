@@ -15,11 +15,8 @@ export default {
                .catch(error => reject(error))
            })
         },
-        async refreshSession() {
+        async refreshSession(refreshToken) {
             return new Promise((resolve, reject) => {
-                let refreshToken = sessionStorage.getItem('refresh_token')
-                if(!refreshToken) return reject('no session to refresh')
-
                 axios.get(`${AUTH_URL}?refresh_token=${refreshToken}`)
                 .then(response => resolve(response.data))
                 .catch(error => reject(error))

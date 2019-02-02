@@ -1,0 +1,33 @@
+#playlist-page {
+    overflow: auto;
+    width: 100%;
+    .playlist__tracks {
+        width: 100%;
+        z-index: 10;
+        position: relative;
+        table.table {
+            max-width: 100%;
+            margin-top: $info-height;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            background: linear-gradient($light-gray, $gray);
+            background-attachment: fixed;
+            table-layout: fixed;
+            tr td,th { 
+                color: $text;
+                padding: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                border-color: $dark-text;
+                &:nth-child(1) { padding-left: 10vh }
+                &:last-child { padding-right: 10vh }
+                & > * { 
+                    max-width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                }
+            }
+        }
+    }
+}
