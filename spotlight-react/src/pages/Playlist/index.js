@@ -17,7 +17,11 @@ export default class PlaylistPage extends Component {
             { ({ data: { playlist }, loading, error}) => {
                 if(!error) { return(
                     <section id="playlist-page">
-                        <InfoHeader imgSrc={ loading ? loadingSVG : playlist.images[0].url } imgAlt="spotify playlist" header={ loading ? 'loading' : playlist.name } text={ loading ? '' : playlist.owner.displayName } />
+                        <InfoHeader 
+                            imgSrc={ loading ? loadingSVG : playlist.images[0].url } 
+                            imgAlt="spotify playlist" 
+                            header={ loading ? 'loading' : playlist.name } 
+                            text={ loading ? '' : playlist.owner.displayName } />
                         <div className="playlist__tracks">
                             <table className="table">
                                 <thead>
@@ -49,6 +53,9 @@ export default class PlaylistPage extends Component {
             }}
             </Query>
         )
+    }
+    headerScroll = (ev) => {
+        console.log('header scroll', ev);
     }
 }
 

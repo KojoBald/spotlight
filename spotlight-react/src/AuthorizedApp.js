@@ -20,7 +20,6 @@ export default class AuthorizedApp extends Component {
 
   componentWillMount() {
     _initializeApollo(this)
-    console.log('mounting app')
   }
 
   render() {
@@ -28,17 +27,13 @@ export default class AuthorizedApp extends Component {
         <ApolloProvider client={ this.state.apollo }>
             <div className="layout" id="layout">
               <Navbar onLogout={ this.props.onLogout }/>
-              <div className="columns is-gapless">
-                <div className="column is-one-fifth">
-                  <Sidebar />
-                </div>
-                <div className="column is-four-fifths" id="content">
-                    <Switch>
-                      <Route exact path="/user" render={ props => <ProfilePage client={ this.state.apollo } { ...props } /> } />
-                      <Route path="/playlist/:id" render={ props => <PlaylistPage client={ this.state.apollo } { ...props } /> } />
-                      <Route render={ props => <ProfilePage client={ this.state.apollo } { ...props } /> } />
-                    </Switch>
-                </div>
+              <Sidebar />
+              <div id="content">
+                <Switch>
+                  <Route exact path="/user" render={ props => <ProfilePage client={ this.state.apollo } { ...props } /> } />
+                  <Route path="/playlist/:id" render={ props => <PlaylistPage client={ this.state.apollo } { ...props } /> } />
+                  <Route render={ props => <ProfilePage client={ this.state.apollo } { ...props } /> } />
+                </Switch>
               </div>
             </div>
             <Particles params={{ 

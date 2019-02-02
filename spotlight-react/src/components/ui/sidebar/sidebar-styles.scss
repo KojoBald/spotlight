@@ -1,12 +1,14 @@
 #sidebar {
     height: 100%;
-    width: 100%;
+    width: 20%;
     padding-top: 25px;
     background-color: $dark-gray;
     border-right: 1px solid $light-gray;
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 10;
     .sidebar__user {
         display: flex;
@@ -32,12 +34,6 @@
             font-weight: 600;
             flex: 0 0 auto;
             display: inline-block;
-        }
-        i {
-            color: $dark-text;
-            font-size: 1.2rem;
-            margin-left: 20px;
-            cursor: pointer;
         }
     }
     h3 { 

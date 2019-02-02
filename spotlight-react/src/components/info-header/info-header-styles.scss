@@ -8,7 +8,7 @@
     width: 100%;
     height: $info-height;
     z-index: 0;
-    
+    pointer-events: none;
     .info__picture-container {
         height: 200px;
         width: 200px;
@@ -29,5 +29,9 @@
         display: inline-block;
         font-weight: 700;
         font-size: 3rem;
+        pointer-events: all;
+    }
+    .info__text {
+        pointer-events: all;
     }
 }
